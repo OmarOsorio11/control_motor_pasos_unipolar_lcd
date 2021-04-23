@@ -1,0 +1,12 @@
+#include <main.h>
+
+void main()
+{
+	setup_lcd(LCD_DISABLED);
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}

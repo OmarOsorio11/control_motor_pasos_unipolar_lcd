@@ -1,0 +1,107 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+004-005 @WRITE_PACKED_MEMORY.P3
+004-005 @READ_PACKED_MEMORY.P4
+006-007 @WRITE_PACKED_MEMORY.P1
+006-007 @READ_PACKED_MEMORY.P2
+00D     lcdlat
+00D     lcd
+021-024 MAIN.steps
+025     MAIN.i
+026     MAIN.j
+027     lcd_init.i
+027     MAIN.@SCRATCH1
+027     @PSTRINGC7_675.@SCRATCH1
+028-02B lcd_init.LCD_INIT_STRING
+028     @PSTRINGC7_675.@SCRATCH2
+029     @PSTRINGC7_675.@SCRATCH3
+02A     lcd_putc.c
+02B     lcd_gotoxy.x
+02C     lcd_gotoxy.y
+02C     @delay_ms1.P1
+02C     lcd_init.@SCRATCH1
+02D     lcd_gotoxy.address
+02E     lcd_gotoxy.@SCRATCH1
+02F     lcd_send_byte.address
+030     lcd_send_byte.n
+031     lcd_read_byte.low
+031     lcd_send_byte.@SCRATCH1
+032     lcd_send_nibble.n
+032     lcd_read_byte.high
+033     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+08D     lcdtris
+111.6   C1OUT
+113.6   C2OUT
+191-192 @WRITE_PROGRAM_MEMORY8.P1
+191-192 @READ_PROGRAM_MEMORY8.P2
+291     CCP_1_LOW
+291     CCP_1
+292     CCP_1_HIGH
+298     CCP_2_LOW
+298     CCP_2
+299     CCP_2_HIGH
+311     CCP_3_LOW
+311     CCP_3
+312     CCP_3_HIGH
+318     CCP_4
+318     CCP_4_LOW
+319     CCP_4_HIGH
+
+ROM Allocation:
+000003  @const691.call
+00000B  @const693.call
+000014  @const695.call
+00001C  @const696.call
+000026  @const698.call
+00002E  @delay_ms1
+000044  lcd_send_nibble
+000050  lcd_read_nibble
+000056  lcd_send_byte
+00005C  lcd_read_byte
+000096  lcd_init
+0000D6  lcd_gotoxy
+0000E8  lcd_putc
+000114  @PSTRINGC7_675
+00015E  MAIN
+00015E  @cinit1
+000166  @cinit2
+
+Project Directory:
+    F:\Universidad\PIC CSS COMPILER AND PROTEUS\Programacion Y control de perifericos\Proyecto numero  (22)\PIC CSS Compiler\
+
+Project Files:
+    main.c                                                  [30-mar.-21 13:29  CRC=E1E4A885]
+    main.h                                                  [26-mar.-21 15:08  CRC=2EB8624F]
+    C:\Program Files (x86)\PICC\Devices\16F1827.h           [12-nov.-13 14:35  CRC=2F9ECFA3]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [19-sep.-13 15:38  CRC=D1A6378A]
+
+Source signature=E388498B
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F1827
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Enhanced 16:    Yes
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
